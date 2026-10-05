@@ -1,0 +1,20 @@
+# Video outputs and media cache
+videos/
+samples/tiktok_kenh_1/
+*.mp4
+*.wav
+*.mp3
+*.mov
+*.m4v
+
+# Engine sub-builds & dependencies
+engine/explainroo/
+engine/explainroo-mac/
+node_modules/
+
+# Temporary and build files
+__pycache__/
+*.py[cod]
+.DS_Store
+.temp_*.md
+temp_*.md

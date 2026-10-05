@@ -1,0 +1,13 @@
+Bạn có bao giờ thắc mắc, máy tính hiểu code như thế nào?
+Máy tính thực chất chỉ là một cục sắt vô tri. Nó chỉ hiểu hai trạng thái điện, bật và tắt, tương ứng với số không và số một.
+Nhưng con người chúng ta lại viết code bằng những dòng chữ tiếng Anh như "if", "else", "print".
+Vậy làm sao để hai bên hiểu nhau?
+Đó là lúc ta cần tới "trình biên dịch", tiếng Anh gọi là compiler.
+Nó giống như một người dịch thuật siêu tốc.
+Khi bạn viết xong một chương trình, compiler sẽ đọc toàn bộ từng dòng code của bạn.
+Nó kiểm tra xem bạn có viết sai lỗi chính tả hay cú pháp nào không.
+Nếu tất cả đều đúng, nó sẽ dịch toàn bộ chương trình đó sang một tệp tin chứa toàn số không và một.
+Máy tính cầm tệp tin này và chạy vèo vèo.
+Giống như bạn nhờ dịch cả một cuốn sách tiếng Việt sang tiếng Nhật, rồi mới mang đi in.
+Lần tới, nếu chương trình báo lỗi đỏ lòm, đừng giận máy tính.
+Đó là compiler đang nhắc bạn sửa lại để máy có thể hiểu đấy!

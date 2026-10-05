@@ -1,0 +1,22 @@
+Máy tính nhớ chỗ đang làm dở bằng cách nào?
+
+Chỉ trong một phút, bạn sẽ hiểu bộ nhớ ngăn xếp hoạt động ra sao, qua một chồng đĩa.
+
+Bộ nhớ này tiếng Anh gọi là Stack.
+
+Hãy tưởng tượng một chồng đĩa ở quán ăn.
+Bạn chỉ có thể đặt đĩa mới lên trên cùng.
+Và khi cần lấy, bạn phải lấy cái trên cùng ra trước.
+Nguyên tắc này gọi là vào sau, ra trước.
+
+Máy tính cũng làm y như vậy.
+Khi bạn đang xem phim, mà có tin nhắn đến.
+Máy tính sẽ đặt bộ phim xuống dưới đáy của ngăn xếp, rồi đặt tin nhắn lên trên để xử lý.
+Trả lời xong tin nhắn, hệ thống rút nó ra.
+Và bộ phim ở ngay bên dưới, lại hiện lên đúng chỗ bạn vừa xem.
+
+Bộ nhớ Stack chính là một chồng đĩa ghi nhớ thứ tự công việc.
+Nó giúp máy tính luôn biết phải quay lại đâu sau khi làm xong việc xen ngang.
+
+Lần tới khi ứng dụng đột ngột văng ra, có thể chồng đĩa của bạn đã xếp quá cao rồi.
+Phần tiếp theo: Ram và Rom khác gì nhau.

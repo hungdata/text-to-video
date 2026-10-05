@@ -1,0 +1,203 @@
+Introduction to web APIs - Learn web development | MDN
+try {
+  document.documentElement.dataset.theme =
+    localStorage.getItem("theme") || "light dark";
+} catch (error) {
+  console.warn("Unable to set theme", error);
+}
+
+try {
+  if (localStorage.getItem("nop") === "yes") {
+    document.documentElement.dataset["nop"] = "yes";
+  }
+} catch (error) {
+  console.warn("Unable to set nop", error);
+}
+Skip to main content
+Skip to search
+MDN
+.mdn-search-button{align-items:center;background-color:var(--color-background-page);border:1px solid var(--color-border-primary);border-radius:var(--radius-full);color:var(--color-text-primary);cursor:pointer;display:flex;justify-content:space-between;margin:0;padding:.25rem .25rem .25rem .75rem;width:5rem}.mdn-search-button:hover{background-color:var(--color-background-secondary)}.mdn-search-button:before{content:"";height:18px;width:15px;--csstools-light-dark-toggle-95231fd5-0:var(--csstools-color-scheme--light) var(--color-blue-80);border-bottom:2px solid var(--csstools-light-dark-toggle-95231fd5-0,var(--color-blue-50))}@supports (color:light-dark(red,red)){.mdn-search-button:before{border-bottom:2px solid light-dark(var(--color-blue-50),var(--color-blue-80))}}
+:host{display:contents}:host(:not([loaded],:focus-within)) slot[name=dropdown]{display:none}
+HTML
+HTML: Markup language
+HTML reference
+Elements
+Global attributes
+Attributes
+See all…
+HTML guides
+Responsive images
+HTML cheatsheet
+Date & time formats
+See all…
+Markup languages
+SVG
+MathML
+XML
+:host{display:contents}:host(:not([loaded],:focus-within)) slot[name=dropdown]{display:none}
+CSS
+CSS: Styling language
+CSS reference
+Properties
+Selectors
+At-rules
+Values
+See all…
+CSS guides
+Box model
+Animations
+Flexbox
+Colors
+See all…
+Layout cookbook
+Column layouts
+Centering an element
+Card component
+See all…
+:host{display:contents}:host(:not([loaded],:focus-within)) slot[name=dropdown]{display:none}
+JavaScript
+JS
+JavaScript: Scripting language
+JS reference
+Standard built-in objects
+Expressions & operators
+Statements & declarations
+Functions
+See all…
+JS guides
+Control flow & error handling
+Loops and iteration
+Working with objects
+Using classes
+See all…
+:host{display:contents}:host(:not([loaded],:focus-within)) slot[name=dropdown]{display:none}
+Web APIs
+Web APIs: Programming interfaces
+Web API reference
+File system API
+Fetch API
+Geolocation API
+HTML DOM API
+Push API
+Service worker API
+See all…
+Web API guides
+Using the Web animation API
+Using the Fetch API
+Working with the History API
+Using the Web speech API
+Using web workers
+:host{display:contents}:host(:not([loaded],:focus-within)) slot[name=dropdown]{display:none}
+All
+All web technology
+Technologies
+Accessibility
+HTTP
+URI
+Web extensions
+WebAssembly
+WebDriver
+See all…
+Topics
+--
+Introduction to web APIs
+Overview: Client-side web APIs
+Next
+First up, we'll start by looking at APIs from a high level — what are they, how do they work, how to use them in your code, and how are they structured? We'll also take a look at what the different main classes of APIs are, and what kind of uses they have.
+Prerequisites:
+Familiarity with
+HTML
+,
+CSS
+, and
+JavaScript
+, especially
+JavaScript object basics
+and core API coverage such as
+DOM scripting
+and
+Network requests
+.
+Learning outcomes:
+What Web APIs are, and what you can do with them.
+How APIs are used.
+In this article
+What are APIs?
+What can APIs do?
+How do APIs work?
+Summary
+What are APIs?
+Application Programming Interfaces (APIs) are constructs made available in programming languages to allow developers to create complex functionality more easily. They abstract more complex code away from you, providing some easier syntax to use in its place.
+As a real-world example, think about the electricity supply in your house, apartment, or other dwellings. If you want to use an appliance in your house, you plug it into a plug socket and it works. You don't try to wire it directly into the power supply — to do so would be really inefficient and, if you are not an electrician, difficult and dangerous to attempt.
+Image source:
+Overloaded plug socket
+by
+The Clear Communication People
+, on Flickr.
+In the same way, if you want to say, program some 3D graphics, it is a lot easier to do it using an API written in a higher-level language such as JavaScript or Python, rather than try to directly write low-level code (say C or C++) that directly controls the computer's GPU or other graphics functions.
+Note:
+See also the
+API glossary entry
+for further description.
+APIs in client-side JavaScript
+Client-side JavaScript, in particular, has many APIs available to it — these are not part of the JavaScript language itself, rather they are built on top of the core JavaScript language, providing you with extra superpowers to use in your JavaScript code. They generally fall into two categories:
+Browser APIs
+are built into your web browser and are able to expose data from the browser and surrounding computer environment and do useful complex things with it. For example, the
+Web Audio API
+provides JavaScript constructs for manipulating audio in the browser — taking an audio track, altering its volume, applying effects to it, etc. In the background, the browser is actually using some complex lower-level code (e.g., C++ or Rust) to do the actual audio processing. But again, this complexity is abstracted away from you by the API.
+Third-party APIs
+are not built into the browser by default, and you generally have to retrieve their code and information from somewhere on the Web. For example, the
+Google Maps API
+allows you to do things like display an interactive map to your office on your website. It provides a special set of constructs you can use to query the Google Maps service and return specific information.
+Relationship between JavaScript, APIs, and other JavaScript tools
+So above, we talked about what client-side JavaScript APIs are, and how they relate to the JavaScript language. Let's recap this to make it clearer, and also mention where other JavaScript tools fit in:
+JavaScript — A high-level scripting language built into browsers that allows you to implement functionality on web pages/apps. Note that JavaScript is also available in other programming environments, such as
+Node
+.
+Browser APIs — constructs built into the browser that sit on top of the JavaScript language and allow you to implement functionality more easily.
+Third-party APIs — constructs built into third-party platforms (e.g., Disqus, Facebook) that allow you to use some of those platform's functionality in your own web pages (for example, display your Disqus comments on a web page).
+JavaScript libraries — Usually one or more JavaScript files containing
+custom functions
+that you can attach to your web page to speed up or enable writing common functionality. Examples include jQuery, Mootools and React.
+JavaScript frameworks — The next step up from libraries, JavaScript frameworks (e.g., Angular and Ember) tend to be packages of HTML, CSS, JavaScript, and other technologies that you install and then use to write an entire web application from scratch. The key difference between a library and a framework is "Inversion of Control". When calling a method from a library, the developer is in control. With a framework, the control is inverted: the framework calls the developer's code.
+What can APIs do?
+There are a huge number of APIs available in modern browsers that allow you to do a wide variety of things in your code. You can see this by taking a look at the
+MDN APIs index page
+.
+Common browser APIs
+In particular, the most common categories of browser APIs you'll use (and which we'll cover in this module in greater detail) are:
+APIs for manipulating documents
+loaded into the browser. The most obvious example is the
+DOM (Document Object Model) API
+, which allows you to manipulate HTML and CSS — creating, removing and changing HTML, dynamically applying new styles to your page, etc. Every time you see a popup window appear on a page or some new content displayed, for example, that's the DOM in action. Find out more about these types of API in
+DOM scripting introduction
+.
+APIs that fetch data from the server
+to update small sections of a webpage on their own are very commonly used. This seemingly small detail has had a huge impact on the performance and behavior of sites — if you just need to update a stock listing or list of available new stories, doing it instantly without having to reload the whole entire page from the server can make the site or app feel much more responsive and "snappy". The main API used for this is the
+Fetch API
+, although older code might still use the
+XMLHttpRequest
+API. You may also come across the term
+AJAX
+, which describes this technique. Find out more about such APIs in
+Making network requests with JavaScript
+.
+APIs for drawing and manipulating graphics
+are widely supported in browsers — the most popular ones are
+Canvas
+and
+WebGL
+, which allow you to programmatically update the pixel data contained in an HTML
+<canvas>
+element to create 2D and 3D scenes. For example, you might draw shapes such as rectangles or circles, import an image onto the canvas, and apply a filter to it such as sepia or grayscale using the Canvas API, or create a complex 3D scene with lighting and textures using WebGL. Such APIs are often combined with APIs for creating animation loops (such as
+window.requestAnimationFrame()
+) and others to make constantly updating scenes like cartoons and games.
+Audio and Video APIs
+like
+HTMLMediaElement
+, the
+Web Audio API
+, and
+WebRTC
+allow you to do really interesting things with multimedia such as creating custom UI controls for playing audio and video, displaying text tracks like captions and subtitles along with your videos, grabbing video from your web camera to be manipulated via a canvas (see above) or displayed on someone else's computer in a web conference, or adding effects to audio tracks (such as gain, distortion, panning, etc.).
+Device APIs

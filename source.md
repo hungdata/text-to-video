@@ -1,0 +1,2 @@
+- Máy tính chỉ hiểu số 0 và 1 (mã máy): "At the lowest level, computers only understand binary code, which consists of 0s and 1s." (Codecademy, What is a Programming Language?)
+- Trình biên dịch dịch sang mã máy: "A compiler translates the entire source code into machine code." (GeeksforGeeks, Introduction to Compilers)
